@@ -1,7 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,latin-ext);
 @import url('https://fonts.googleapis.com/css?family=Gelasio|Kulim+Park|Nanum+Myeongjo|Nanum+Gothic|Noto+Sans|Noto+Sans+KR|Roboto&display=swap');
 @import url(syntax/monokai.css);
-
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -98,7 +98,7 @@ code {
 	flex: 0 0 220px;
 	padding: 15px;
 	z-index: 1;
-	background-color: #222;
+	background: linear-gradient(to bottom, #222, rgb(41, 47, 104));
 	color: #fff;
 }
 
@@ -111,14 +111,20 @@ code {
 	padding-inline-start: 0px;
 }
 
+/** 타이틀 정보*/
 .sidebar-brand > a {
-	font-size: 300%;
-	font-family: 'Gelasio';
+	font-size: 180%;
+	font-weight: 300;
+	margin-bottom: 15px;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	color: #fff;
 }
 
+/** 소개문구*/
 .lead {
-	font-size: 120%;
+	padding-top: 15px;
+	font-size: 90%;
+	font-family: 'Noto Sans Korean';
 	color: #aaa;
 }
 
@@ -130,17 +136,18 @@ code {
 	margin-top: 20px;
 }
 
+/** 카테고리 타이틀*/
 .nav-title {
-	font-size: 100%;
-	font-family: "Noto Sans";
+	font-size: 85%;
+	font-family: "Noto Sans Korean";
 	text-transform: uppercase;
 	border-bottom: 1px solid gray;
-	margin-bottom: 5px;
+	font-weight: bold;
 }
-
+/** 카테고리 아이템*/
 a.nav-item {
-	font-size: 120%;
-	font-family: "Noto Sans";
+	font-size: 80%;
+	font-family: "Noto Sans Korean";
 	text-transform: capitalize;
 	color: #aaa;
 }

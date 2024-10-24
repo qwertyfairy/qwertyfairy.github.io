@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Hello
+title: 하루의 기록
 email: qwertyfairy48@gmail.com
 description: >
   개발👩‍💻<br>
