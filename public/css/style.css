@@ -114,7 +114,6 @@ code {
 /** 타이틀 정보*/
 .sidebar-brand > a {
 	font-size: 180%;
-	font-weight: 300;
 	margin-bottom: 15px;
 	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	color: #fff;
@@ -142,7 +141,7 @@ code {
 	font-family: "Noto Sans Korean";
 	text-transform: uppercase;
 	border-bottom: 1px solid gray;
-	font-weight: bold;
+
 }
 /** 카테고리 아이템*/
 a.nav-item {
