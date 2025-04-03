@@ -50,18 +50,21 @@ CookieManager.getInstance().setCookie("qwerty.com","username=qwerty; domain=qwer
 <br/>
 
 ## 쿠키의 속성
-
 쿠키에 다양한 속성이 존재하나, 이해하고 있으면 좋을 두 가지만 설명하고자 한다.
-
-**domain**
+   
+<br/>
+  
+**domain**  
 쿠키에 접근 가능한 domain(도메인)을 지정한다. 해당 옵션에 아무 값도 넣지 않았다면 쿠키를 설정한 도메인에서만 쿠키에 접근할 수 있다. qwerty.com에서 설정한 쿠키는 other.com에서 얻을 수 없다. 
 
 또한 서브 도메인(sub domain) two.qwerty.com에서도 쿠키 정보를 얻을 수 없는데, 이 경우 루트 도메인인 domain=qwerty.com를 명시적으로 설정해주면 된다.
 
 오래된 표기법이지만 하위 호환성 유지를 위해 앞에 .을 붙여도 동일하게 작동한다. 
-eg. domain=.qwerty.com 
-
-**secure**
+eg. domain=.qwerty.com   
+   
+<br/>
+  
+**secure**  
 secure 옵션이 있는 경우 url앞에 https://가 붙어야 한다. 쿠키는 기본적으로 도메인만 확인하지 프로토콜을 확인하지 않기 때문인데 secure 속성이 true가 되면 프로토콜도 확인하게 된다. 
 
 ```kotlin
@@ -77,7 +80,7 @@ CookieManager.getInstance().getCookie("qwerty.com") // 조회 불가, null 반�
 
 ## CookieManager에 등록되는 쿠키
 
-**세션 쿠키(Session Cookie)**
+**세션 쿠키(Session Cookie)**  
 브라우저가 닫힐 때 같이 삭제되는 쿠키로 만료일(expires)이 지정되지 않은 쿠키이다.  
 
 CookieManager는 쿠키의 타입과 상관없이 영구 저장소인 데이터베이스에 등록해 관리하기 때문에 앱에서는 세션 쿠키를 제거하는 처리를 반드시 해줘야 한다.
@@ -89,13 +92,15 @@ CookieManager.getInstance().removeSessionCookies(null)
 //수행 결과를 받는 리스너를 등록할수있다. 필요없기에 null을 넣음
 ```
 
-CookieManager를 반드시 사용하지 않아도 된다면  앱 내 메모리에 세션 쿠키를 저장해 처리 하는 방법도 고려할 수 있다.
+CookieManager를 반드시 사용하지 않아도 된다면  앱 내 메모리에 세션 쿠키를 저장해 처리 하는 방법도 고려할 수 있다.   
+   
+<br/>
 
-**지속 쿠키(Persistent Cookie)**
-
+**지속 쿠키(Persistent Cookie)**  
 만료일이 지정된 쿠키로 GMT시간 기준으로 관리된다. 웹뷰는 만료된 쿠키를 자동으로 제거한다. 
 
 웹뷰에서 사용되는 쿠키는 CookieManager에 자동으로 동기화 되는데 갱신이나 삭제는 동일한 도메인과 경로에서만 해야한다. 즉 쿠키를 설정할 때 지정했던 도메인이나 경로를 사용해야 한다. 
+  
 <br/>
 
 ## CookieManager의 Database 구조 확인
@@ -138,8 +143,9 @@ Android Studio의 Device Explorer에서 Cookies DB를 추출할 수 있다.
 
 세션 쿠키로 등록된 username은 개발자가 직접 제거해주지 않는 이상 계속 지니고 있게 된다. 
 같은 이름, 도메인, 경로가 입력된다면 갱신 될 가능성은 있으나 적절히 제거하는 처리가 필요하다.
+   
 <br/>
-
+  
 ## 결론
 
 - secure 속성이 있으면 프로토콜도 검증하기 때문에 url에 https://가 반드시 붙어야 한다.
