@@ -8,7 +8,7 @@ category: basic
 2025년 03월 27일  
 
 로그인 API 응답으로 내려 받은 사용자 정보를 앱 쿠키에 설정해 놓고 앱내 웹뷰의 로그인 상태를 유지하고 있었다.
-이 과정에 CookieManager를 제대로 사용하고있는가 의문이 들었고 CookieManager의 작동과 사용법을 학습하고자 한다.
+이 과정에 CookieManager를 제대로 사용하고있는가 의문이 들었고 CookieManager의 작동과 사용법을 학습하고자 한다.  
 
 Android의 웹뷰에 사용되는 쿠키 정보는 CookieSyncManger와 CookieManager가 관리한다. CookieSyncManager는 API 21에서 deprecated되었으므로 CookieManager에 대해 알아보고자 한다.
 
@@ -19,15 +19,13 @@ Android의 웹뷰에 사용되는 쿠키 정보는 CookieSyncManger와 CookieMan
 CookieManager.getInstance().setCookie(url, cookie)
 ```
 
-메서드의 파라미터에 대한 설명은 다음과 같다.
+메서드의 파라미터에 대한 설명은 다음과 같다.  
 
 - url : URL에 쿠키를 지정한다.
 - cookie : HTTP Set-Cookie 포맷을 따른다.
  
 
-url은 해당 쿠키 값을 지니는 url이고, 단순히 생각하면 domain 검증이 들어갈 url을 입력하면 된다. 보통 검증이 수행되는 url의 도메인만 넣어준다.
-
-쿠키에서 의미하는 도메인은 다음과 같다.
+url은 해당 쿠키 값을 지니는 url이고, 단순히 생각하면 domain 검증이 들어갈 url을 입력하면 된다. 보통 검증이 수행되는 url의 도메인만 넣어준다.  
 
 - domain : 쿠키에 접근 가능한 도메인을 지정한다.
 
@@ -37,8 +35,7 @@ url은 해당 쿠키 값을 지니는 url이고, 단순히 생각하면 domain �
 username=qwerty; domain=qwerty.com; path=/ 
 ```
 
-위 쿠키는 domain이 qwerty.com에서만 접근할 수 있는 쿠키이다.
-
+위 쿠키는 domain이 qwerty.com에서만 접근할 수 있는 쿠키이다.  
 해당 쿠키를 CookieManger에 설정하려면 다음과 같이 할 수 있다. 참고로 이름(name *쿠키의 key를 의미), 도메인(domain), 경로(path)로 쿠키를 구분하기 때문에 세 가지가 같은 값을 가진 쿠키가 들어온다면 값은 덮어 쓰이게 된다.  
 
 ```kotlin
@@ -59,8 +56,10 @@ CookieManager.getInstance().setCookie("qwerty.com","username=qwerty; domain=qwer
 
 또한 서브 도메인(sub domain) two.qwerty.com에서도 쿠키 정보를 얻을 수 없는데, 이 경우 루트 도메인인 domain=qwerty.com를 명시적으로 설정해주면 된다.
 
-오래된 표기법이지만 하위 호환성 유지를 위해 앞에 .을 붙여도 동일하게 작동한다. 
+오래된 표기법이지만 하위 호환성 유지를 위해 앞에 .을 붙여도 동일하게 작동한다.   
+``` 
 eg. domain=.qwerty.com   
+```
    
 <br/>
   
@@ -129,10 +128,9 @@ CookieManager.getInstance().setCookie("qwerty.com", sessionCookie.toString())
 
 Android Studio의 Device Explorer에서 Cookies DB를 추출할 수 있다.
 
-![image](/public/img/cookie01.png)
-
-
-추출된 파일은 SQLite Viewer를 통해 확인한다.
+![image](/public/img/cookie01.png)   
+</br>
+추출된 파일은 SQLite Viewer를 통해 확인한다.   
 
 ![image](/public/img/cookie02.png)
 
