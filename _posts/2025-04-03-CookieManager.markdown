@@ -6,12 +6,12 @@ category: basic
 ## CookieManager
 
 2025년 03월 27일   
-</br>
+<br/>
 
 로그인 API 응답으로 내려 받은 사용자 정보를 앱 쿠키에 설정해 놓고 앱내 웹뷰의 로그인 상태를 유지하고 있었다.
 이 과정에 CookieManager를 제대로 사용하고있는가 의문이 들었고 CookieManager의 작동과 사용법을 학습하고자 한다.  
 
-</br>
+<br/>
 
 Android의 웹뷰에 사용되는 쿠키 정보는 CookieSyncManger와 CookieManager가 관리한다. (CookieSyncManager는 API 21에서 deprecated) 
 기본적으로 CookieManager는 웹뷰에 들어오는 쿠키 정보(Set-Cookie)를 자동으로 관리한다. 하지만 아래 메서드를 통해 개발자가 직접 쿠키를 등록할 수 있다.   
