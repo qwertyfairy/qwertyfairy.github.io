@@ -124,13 +124,12 @@ CookieManager.getInstance().setCookie("qwerty.com", sessionCookie.toString())
 
 Android Studio의 Device Explorer에서 Cookies DB를 추출할 수 있다.
 
-![sample](https://github.com/user-attachments/assets/82551a62-f804-4485-9660-a2f55c2a88ee)
+![image](/public/img/cookie01.png)
 
 
 추출된 파일은 SQLite Viewer를 통해 확인한다.
 
-![image](https://github.com/user-attachments/assets/96f02e24-49f1-4469-ad2b-d1e8fa557b39)
-
+![image](/public/img/cookie02.png)
 
 테스트를 위해 등록한 쿠키가 정상적으로 등록되어있다. 
 필드 expries_utc(만료일), is_persistent(지속 쿠키 여부)를 통해 각 쿠키 타입을 구분할 수 있다.
