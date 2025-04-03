@@ -142,7 +142,7 @@ Android Studio의 Device Explorer에서 Cookies DB를 추출할 수 있다.
 
 ## 결론
 
-- secure 속성이 있으면 프로토콜도 검증하기 때문에 url에 [https://](https://가) 가 반드시 붙어야 한다.
+- secure 속성이 있으면 프로토콜도 검증하기 때문에 url에 https://가 반드시 붙어야 한다.
 https:// 없이 쿠키를 설정하면 에러 문구가 출력 되고 해당 쿠키는 등록되지 않는다. 
 Please either use the 'https:' scheme for this URL or omit the 'Secure' directive in the cookie value.
 - 세션 쿠키는 브라우저가 닫히는 시점에 제거 되어야 한다, 즉 개발자가 적절히 판단하여 제거하는 작업을 해줘야 한다.
