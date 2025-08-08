@@ -4,9 +4,12 @@ category: works
 ---
 
 
-Android의 위젯들은 모두 View를 상속 받고 있다. 이 View에는 onTouchEvent가 구현되어있는데 사용자를 통해 입력 받은 터치 이벤트가 여기서 제어된다. 기본적으로 onTouchEvent는 각 View의 상태에 맞춰 터치 이벤트가 처리되도록 구현되어있다.  
+Android의 위젯들은 모두 View를 상속 받고 있다. 이 View에는 onTouchEvent가 구현되어있는데 사용자를 통해 입력 받은 터치 이벤트가 여기서 제어된다. 기본적으로 onTouchEvent는 각 View의 상태에 맞춰 터치 이벤트가 처리되도록 구현되어있다.
 
-Zoom in / out 기능을 구현하고자 하는 FluidVideoView은 FramLayout의 ViewGruop을 상속 받은 형태로 단순 출력 용 View이기에 onTouchEvent에서 MotionEvent.ACTION_DOWN이 후 더 이상의 이벤트를 전달 받을 수 없었다. 상호 작용이 필요 없는 View는 ACTION_DOWN이후에 처리를 전부 무시하기 때문이다. 
+<br>
+Zoom in / out 기능을 구현하고자 하는 FluidVideoView은 FramLayout의 ViewGruop을 상속 받은 형태로 단순 출력 용 View이기에 onTouchEvent에서 MotionEvent.ACTION_DOWN이 후 더 이상의 이벤트를 전달 받을 수 없었다. 상호 작용이 필요 없는 View는 ACTION_DOWN이후에 처리를 전부 무시하기 때문이다.<span style="text-decoration: underline; color: #007acc;" title="onTouchEvent에서 false를 반환하면 이후 들어오는 이벤트는 무시된다. 상호작용 가능하지 않은 위젯들은 보통 ACTION_DOWN이후 false가 반환되어 더이상의 이벤트가 들어오지 않게 되어있다.">[?]</span> 
+
+<br>
 
 현재 View에서 사용자 이벤트를 모두 받기 위해 상호작용 되는 View라는 설정이 필요했고 isClickable을 true로 변경해 FluidVideoView의 onTouchEvent에서 모든 이벤트를 수신할 수 있도록 했다.  
 
@@ -18,14 +21,15 @@ isClickable = turu
 <br>
 Android에서는 GestureDetector를 사용해 사용자의 동작을 감지 할 수 있다. 간단히 핀치 줌(Pinch Zoom)동작으로 Zoom in/out 기능을 제공하고자 했으며 해당 동작은 ScaleGestureDetector로 감지할 수 있다. ScaleGestureDetector 클래스에서 사용자의 Scale동작을 판단해주는데 이때 호출될  ScaleGestureDetector.OnScaleGestureListener를 구현해 주어야 한다. 
 
+<br>
 
-### **ScaleGestureDetector.OnScaleGestureListener**
-- public boolean onScaleBegin(@NonNull ScaleGestureDetector detector)<br>
-Scale 이벤트가 시작될 때 호출. false인 경우 onScale, onScaleEnd가 호출되지 않는다.
-- public boolean onScale(@NonNull ScaleGestureDetector detector)<br>
-Scale 이벤트가 진행 중일 때 호출. 반환값으로 Scale 처리 여부를 결정한다.
-- public void onScaleEnd(@NonNull ScaleGestureDetector detector)<br>
-Scale 이벤트가 끝났을 때
+**ScaleGestureDetector.OnScaleGestureListener**<br>
+● public boolean onScaleBegin(@NonNull ScaleGestureDetector detector)<br>
+　Scale 이벤트가 시작될 때 호출. false인 경우 onScale, onScaleEnd가 호출되지 않는다.<br>
+● public boolean onScale(@NonNull ScaleGestureDetector detector)<br>
+　Scale 이벤트가 진행 중일 때 호출. 반환값으로 Scale 처리 여부를 결정한다.<br>
+● public void onScaleEnd(@NonNull ScaleGestureDetector detector)<br>
+　Scale 이벤트가 끝났을 때
 <br>
 
 <br>
