@@ -130,7 +130,7 @@ CookieManager.getInstance().setCookie("qwerty.com", sessionCookie.toString())
 Android Studio의 Device Explorer에서 Cookies DB를 추출할 수 있다.
 
 ![image](/public/img/cookie01.png)   
-</br>
+<br/>
 추출된 파일은 SQLite Viewer를 통해 확인한다.   
 
 ![image](/public/img/cookie02.png)
