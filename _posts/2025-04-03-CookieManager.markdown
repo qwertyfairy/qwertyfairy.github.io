@@ -1,8 +1,8 @@
 ---
 layout: post
-category: basic
+categories: [기초]
+title: "CookieManager"
 ---
-
 ## CookieManager
 
 2025년 03월 27일   

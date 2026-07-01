@@ -1,8 +1,8 @@
 ---
 layout: post
-category: basic
+categories: [기초]
+title: "Thread의 Interrupt()"
 ---
-
 Do it Java에서 16-2장 Thread 클래스와 여러가지 메서드에서 스레드 중지에 대한 설명이 잠깐 나온다. 책에서는 스레드가 특정 메서드 호출(sleep, wait, join)로 Not Runnable 상태일 때 interrupt()메서드를 호출하면 InterrupedException이 발생하여 Not Runnable 상태를 빠져 나온다고 하는데 설명이 부족하여 찾아보았다.  
 <br>
 <u>인터럽트(interrupt)는 스레드에게 현재 수행중인 작업을 중단하도록 요청하는 신호이며 이 신호에 대한 처리는 개발자의 몫</u>이다. 스레드의 interrupt()를 호출하면 해당 스레드의 인터럽트가 플래그가 설정되는데, 이 신호를 보고 InterruptedException을 던지는 메서드가 sleep(), wait(), join()등이다. 이렇게 예외를 던지는 메서드가 아닌 경우 interrupted() 또는 Thread.<em>interrupted()</em>를 사용해 주기적으로 인터럽트 상태를 확인해 대응해야한다.
