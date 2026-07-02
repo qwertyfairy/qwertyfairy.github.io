@@ -14,7 +14,6 @@ Jekyll + **Chirpy** 테마 기반 개인 블로그. GitHub Pages에 **GitHub Act
    ---
    title: "글 제목"
    categories: [상위, 하위]
-   tags: [태그1, 태그2]   # 선택
    ---
    ```
 3. 본문은 그 아래 Markdown으로 작성
@@ -36,6 +35,7 @@ Jekyll + **Chirpy** 테마 기반 개인 블로그. GitHub Pages에 **GitHub Act
 - **읽는 시간 미표시**: `_includes/read-time.html`을 빈 파일로 override (지우지 말 것)
 - **공유하기**: 소셜 플랫폼 없음, 링크 복사만 (`_data/share.yml`의 `platforms` 비움)
 - **사이드바 연락처**: GitHub + 이메일만 (`_data/contact.yml`)
+- **태그 미사용**: 태그 탭 제거 (`_tabs/tags.md` 삭제). 포스트에 `tags` front matter 쓰지 말 것
 - 사이트 제목/작성자/이메일 등은 `_config.yml`의 `title`, `social`에서 관리
 
 ## 로컬 미리보기
