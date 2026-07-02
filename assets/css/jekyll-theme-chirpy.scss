@@ -75,3 +75,8 @@ blockquote[class^='prompt-'] li {
   > p:first-child { margin-top: 0; }
   > :last-child { margin-bottom: 0; }
 }
+
+/* 사이드바 태그라인 이탤릭 제거 (부트스트랩 fst-italic이 !important라 동급으로 override) */
+#sidebar .site-subtitle {
+  font-style: normal !important;
+}
