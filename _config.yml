@@ -223,6 +223,7 @@ exclude:
   - README.md
   - LICENSE
   - CLAUDE.md
+  - OPERATIONS.md
   - purgecss.js
   - "*.config.js"
   - "package*.json"
