@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: [기초]
+categories: [Android, 작업]
 title: "CookieManager"
 ---
 ## CookieManager

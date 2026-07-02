@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: [개발]
+categories: [Android, 작업]
 title: "VideoView Zoom in out 기능 개발"
 ---
 Android의 위젯들은 모두 View를 상속 받고 있다. 이 View에는 onTouchEvent가 구현되어있는데 사용자를 통해 입력 받은 터치 이벤트가 여기서 제어된다. 기본적으로 onTouchEvent는 각 View의 상태에 맞춰 터치 이벤트가 처리되도록 구현되어있다.

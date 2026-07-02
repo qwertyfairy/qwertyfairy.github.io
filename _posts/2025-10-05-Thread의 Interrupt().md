@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: [기초]
+categories: [Java, 학습]
 title: "Thread의 Interrupt()"
 ---
 Do it Java에서 16-2장 Thread 클래스와 여러가지 메서드에서 스레드 중지에 대한 설명이 잠깐 나온다. 책에서는 스레드가 특정 메서드 호출(sleep, wait, join)로 Not Runnable 상태일 때 interrupt()메서드를 호출하면 InterrupedException이 발생하여 Not Runnable 상태를 빠져 나온다고 하는데 설명이 부족하여 찾아보았다.  

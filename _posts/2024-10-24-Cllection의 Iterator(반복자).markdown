@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: [기초]
+categories: [Java, 학습]
 title: "Cllection의 Iterator(반복자)"
 ---
 <span style="font-size: 20px;">**Iterator, 반복자**</span>
