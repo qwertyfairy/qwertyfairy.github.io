@@ -57,6 +57,12 @@ bundle exec jekyll serve --config _config.yml,_config_dev.yml
 `main` 브랜치에 push → `.github/workflows/pages-deploy.yml`이 자동 빌드·배포.
 (GitHub 저장소 Settings → Pages → Source가 **"GitHub Actions"** 여야 함.)
 
+## 주의: `url`/`baseurl` 설정
+
+- 유저 사이트(`qwertyfairy.github.io`)라 **`baseurl`은 반드시 `""`**, `url`은 `"https://qwertyfairy.github.io"`.
+- `baseurl`에 도메인을 넣으면 모든 링크가 이중 프리픽스(`/https://.../...`)로 깨지고, 배포 워크플로의 htmlproofer 테스트가 실패한다.
+- 포스트 이미지는 `public/img/`에 두고 `/public/img/파일명`으로 참조. 이미지 파일이 없으면 htmlproofer가 빌드를 실패시킨다.
+
 ## 주의: 전역 gitignore
 
 이 맥의 `~/.gitignore_global`에 `*.yml`이 있어 **.yml 파일이 기본적으로 커밋에서 누락**된다.
