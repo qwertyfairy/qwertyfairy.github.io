@@ -25,3 +25,53 @@
 #sidebar #avatar {
   box-shadow: var(--avatar-border-color) 0 0 0 1px;
 }
+
+/* callout(prompt-info) 색상: 머스터드 #dda233 */
+:root {
+  --prompt-info-bg: rgb(221 162 51 / 15%);
+  --prompt-info-icon-color: #b8801a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-mode]) {
+    --prompt-info-bg: rgb(221 162 51 / 14%);
+    --prompt-info-icon-color: #dda233;
+  }
+}
+[data-mode='dark'] {
+  --prompt-info-bg: rgb(221 162 51 / 14%);
+  --prompt-info-icon-color: #dda233;
+}
+[data-mode='light'] {
+  --prompt-info-bg: rgb(221 162 51 / 15%);
+  --prompt-info-icon-color: #b8801a;
+}
+
+/* callout 아이콘(느낌표 등) 제거 + 왼쪽 여백 축소 */
+blockquote[class^='prompt-']::before {
+  content: none !important;
+}
+blockquote[class^='prompt-'] {
+  padding-left: 1rem !important;
+}
+
+/* callout 안 리스트 간격 규칙(C): 리스트 자체 여백 제거 → 콜아웃 패딩이 간격 담당 */
+blockquote[class^='prompt-'] > ul,
+blockquote[class^='prompt-'] > ol {
+  margin: 0;
+  padding-left: 1.6rem;
+}
+blockquote[class^='prompt-'] li {
+  margin: 0;
+}
+
+/* Q&A 전용 박스: 질문형 콘텐츠(코드블록 포함 가능). 세이지 그린 #9ab87a */
+.box-qa {
+  background: rgb(154 184 122 / 12%);
+  border-left: 4px solid #9ab87a;
+  border-radius: 6px;
+  padding: 1rem 1.15rem;
+  margin: 1rem 0;
+
+  > p:first-child { margin-top: 0; }
+  > :last-child { margin-bottom: 0; }
+}

@@ -41,6 +41,8 @@ Jekyll + **Chirpy** 테마 기반 개인 블로그. GitHub Pages에 **GitHub Act
 - **파비콘**: 주황 고양이 아이콘 (`assets/img/favicons/`, 원본: iconify solar:cat-bold #E8833A)
 - **태그 미사용**: 태그 탭 제거 (`_tabs/tags.md` 삭제). 포스트에 `tags` front matter 쓰지 말 것
 - **한글 폰트**: Pretendard. `_includes/metadata-hook.html`에서 jsDelivr CDN 로드, `assets/css/jekyll-theme-chirpy.scss`에서 `--bs-font-sans-serif` override (코드블록 monospace는 유지)
+- **콜아웃(prompt)**: `prompt-info` 사용. 색은 머스터드 `#dda233`, ⓘ 아이콘 제거, 콜아웃 안 리스트는 자체 여백 0(콜아웃 패딩이 간격 담당). 모두 `assets/css/jekyll-theme-chirpy.scss`의 전역 CSS라 새 글에 자동 적용됨 — 포스트마다 손댈 필요 없음
+- **Q&A 박스**: 질문형 콘텐츠(Q. ~)는 `<div class="box-qa" markdown="1"> … </div>`로 감싼다. 세이지 그린 `#9ab87a` + 왼쪽 강조선, 코드블록 포함 가능. 질문→답→코드→마무리를 한 박스에 담아 흐름이 끊기지 않게 한다. 박스 안 소제목은 헤딩(`####`) 대신 **볼드** 사용(TOC에 안 잡히게)
 - 사이트 제목/작성자/이메일 등은 `_config.yml`의 `title`, `social`에서 관리
 
 ## 로컬 미리보기
