@@ -1,8 +1,8 @@
 ---
 layout: post
-category: basic
+categories: [Java, 학습]
+title: "Cllection의 Iterator(반복자)"
 ---
-
 <span style="font-size: 20px;">**Iterator, 반복자**</span>
 
 Collection은 Iterator(반복자)를 상속하고있다. 따라서 Collection을 상속한 클래스들은 Iterator를 반환받을 수 있다. 이 Iterator의 역할은 저장된 요소들을 순차적으로 참조할때 사용한다. 

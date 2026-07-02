@@ -1,8 +1,8 @@
 ---
 layout: post
-category: basic
+categories: [Android, 작업]
+title: "CookieManager"
 ---
-
 ## CookieManager
 
 2025년 03월 27일   
