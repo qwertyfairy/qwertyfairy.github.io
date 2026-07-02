@@ -35,6 +35,10 @@ Jekyll + **Chirpy** 테마 기반 개인 블로그. GitHub Pages에 **GitHub Act
 - **읽는 시간 미표시**: `_includes/read-time.html`을 빈 파일로 override (지우지 말 것)
 - **공유하기**: 소셜 플랫폼 없음, 링크 복사만 (`_data/share.yml`의 `platforms` 비움)
 - **사이드바 연락처**: GitHub + 이메일만 (`_data/contact.yml`)
+- **표기 이름**: SHISA (작성자·저작권, `_config.yml`의 `social.name`). 푸터 이름 링크는 GitHub (`social.links` 첫 항목)
+- **X(트위터) 미사용**: 링크·meta 어디에도 넣지 말 것
+- **아바타**: `/public/img/avatar.jpeg` (테두리 1px는 커스텀 CSS)
+- **파비콘**: 주황 고양이 아이콘 (`assets/img/favicons/`, 원본: iconify solar:cat-bold #E8833A)
 - **태그 미사용**: 태그 탭 제거 (`_tabs/tags.md` 삭제). 포스트에 `tags` front matter 쓰지 말 것
 - **한글 폰트**: Pretendard. `_includes/metadata-hook.html`에서 jsDelivr CDN 로드, `assets/css/jekyll-theme-chirpy.scss`에서 `--bs-font-sans-serif` override (코드블록 monospace는 유지)
 - 사이트 제목/작성자/이메일 등은 `_config.yml`의 `title`, `social`에서 관리
