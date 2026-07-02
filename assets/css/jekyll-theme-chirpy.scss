@@ -20,3 +20,8 @@
     "Apple SD Gothic Neo", Roboto, "Helvetica Neue", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
 }
+
+/* 아바타 테두리 얇게 (크기는 기본 유지) */
+#sidebar #avatar {
+  box-shadow: var(--avatar-border-color) 0 0 0 1px;
+}
