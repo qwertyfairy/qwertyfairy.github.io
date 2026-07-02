@@ -45,6 +45,13 @@ Jekyll + **Chirpy** 테마 기반 개인 블로그. GitHub Pages에 **GitHub Act
 - **Q&A 박스**: 질문형 콘텐츠(Q. ~)는 `<div class="box-qa" markdown="1"> … </div>`로 감싼다. 세이지 그린 `#9ab87a` + 왼쪽 강조선, 코드블록 포함 가능. 질문→답→코드→마무리를 한 박스에 담아 흐름이 끊기지 않게 한다. 박스 안 소제목은 헤딩(`####`) 대신 **볼드** 사용(TOC에 안 잡히게)
 - 사이트 제목/작성자/이메일 등은 `_config.yml`의 `title`, `social`에서 관리
 
+## 작업 방식: 미리보기 먼저, 배포는 승인 후
+
+수정은 이 저장소(main)에 바로 커밋하지 않는다. **미리보기 샌드박스 `~/AndroidStudioProjects/chirpy-preview`** 에서 작업해 `localhost:4321`로 사용자에게 보여주고, **최종 승인을 받은 뒤에만** 이 저장소에 반영·push한다.
+
+- push 전 필수 검증: `JEKYLL_ENV=production` 빌드 + htmlproofer 통과 (배포 워크플로가 같은 검사를 하므로 실패하면 배포가 안 됨)
+- 미리보기 저장소가 없으면: 이 저장소를 복제해 `_config_dev.yml`(아래) 방식으로 띄우면 동일
+
 ## 로컬 미리보기
 
 Ruby 3.x 필요 (Chirpy는 `~> 3.1`, Ruby 4는 안 됨). 이 맥엔 `ruby@3.3` 설치돼 있음.
