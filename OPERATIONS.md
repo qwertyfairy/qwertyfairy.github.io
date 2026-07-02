@@ -36,6 +36,7 @@ Jekyll + **Chirpy** 테마 기반 개인 블로그. GitHub Pages에 **GitHub Act
 - **공유하기**: 소셜 플랫폼 없음, 링크 복사만 (`_data/share.yml`의 `platforms` 비움)
 - **사이드바 연락처**: GitHub + 이메일만 (`_data/contact.yml`)
 - **태그 미사용**: 태그 탭 제거 (`_tabs/tags.md` 삭제). 포스트에 `tags` front matter 쓰지 말 것
+- **한글 폰트**: Pretendard. `_includes/metadata-hook.html`에서 jsDelivr CDN 로드, `assets/css/jekyll-theme-chirpy.scss`에서 `--bs-font-sans-serif` override (코드블록 monospace는 유지)
 - 사이트 제목/작성자/이메일 등은 `_config.yml`의 `title`, `social`에서 관리
 
 ## 로컬 미리보기
