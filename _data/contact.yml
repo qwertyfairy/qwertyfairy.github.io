@@ -1,0 +1,7 @@
+# 사이드바 하단 아이콘: GitHub, 이메일만
+- type: github
+  icon: "fab fa-github"
+
+- type: email
+  icon: "fas fa-envelope"
+  noblank: true # open link in current tab
