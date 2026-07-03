@@ -80,3 +80,8 @@ blockquote[class^='prompt-'] li {
 #sidebar .site-subtitle {
   font-style: normal !important;
 }
+
+/* 콜아웃 내부 리스트 마커: 사각 불릿(▪)으로 통일 */
+blockquote[class^='prompt-'] > ul {
+  list-style: square;
+}
