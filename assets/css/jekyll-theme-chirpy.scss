@@ -26,24 +26,24 @@
   box-shadow: var(--avatar-border-color) 0 0 0 1px;
 }
 
-/* callout(prompt-info) 색상: 머스터드 #dda233 */
+/* callout(prompt-info) 색상: 골드 #c9a84c */
 :root {
-  --prompt-info-bg: rgb(221 162 51 / 15%);
-  --prompt-info-icon-color: #b8801a;
+  --prompt-info-bg: rgb(201 168 76 / 17%);
+  --prompt-info-icon-color: #96793a;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-mode]) {
-    --prompt-info-bg: rgb(221 162 51 / 14%);
-    --prompt-info-icon-color: #dda233;
+    --prompt-info-bg: rgb(201 168 76 / 16%);
+    --prompt-info-icon-color: #c9a84c;
   }
 }
 [data-mode='dark'] {
-  --prompt-info-bg: rgb(221 162 51 / 14%);
-  --prompt-info-icon-color: #dda233;
+  --prompt-info-bg: rgb(201 168 76 / 16%);
+  --prompt-info-icon-color: #c9a84c;
 }
 [data-mode='light'] {
-  --prompt-info-bg: rgb(221 162 51 / 15%);
-  --prompt-info-icon-color: #b8801a;
+  --prompt-info-bg: rgb(201 168 76 / 17%);
+  --prompt-info-icon-color: #96793a;
 }
 
 /* callout 아이콘(느낌표 등) 제거 + 왼쪽 여백 축소 */
@@ -66,11 +66,27 @@ blockquote[class^='prompt-'] li {
 
 /* Q&A 전용 박스: 질문형 콘텐츠(코드블록 포함 가능). 세이지 그린 #9ab87a */
 .box-qa {
-  background: rgb(154 184 122 / 12%);
-  border-left: 4px solid #9ab87a;
-  border-radius: 6px;
-  padding: 1rem 1.15rem;
-  margin: 1rem 0;
+  position: relative;
+  border: 1px solid rgb(154 184 122 / 45%);
+  border-radius: 8px;
+  padding: 1.35rem 1.15rem 1rem;
+  margin: 1.6rem 0 1rem;
+
+  &::before {
+    content: 'Q&A';
+    position: absolute;
+    top: -0.75em;
+    left: 1rem;
+    background: var(--main-bg);
+    color: #9ab87a;
+    border: 1px solid rgb(154 184 122 / 45%);
+    border-radius: 99px;
+    padding: 0 0.7rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+  }
 
   > p:first-child { margin-top: 0; }
   > :last-child { margin-bottom: 0; }
