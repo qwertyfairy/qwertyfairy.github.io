@@ -51,6 +51,7 @@ Jekyll + **Chirpy** 테마 기반 개인 블로그. GitHub Pages에 **GitHub Act
 
 - push 전 필수 검증: `JEKYLL_ENV=production` 빌드 + htmlproofer 통과 (배포 워크플로가 같은 검사를 하므로 실패하면 배포가 안 됨)
 - 미리보기 저장소가 없으면: 이 저장소를 복제해 `_config_dev.yml`(아래) 방식으로 띄우면 동일
+- **수정 부분 형광펜 표시(2026-07 확정)**: 기존 글을 수정·보완할 때는 샌드박스에서 추가/변경 블록을 `<div class="preview-added" markdown="1"> … </div>`로 감싸 형광펜(노란 배경 + 점선 테두리, `assets/css/jekyll-theme-chirpy.scss`의 `.preview-added`)으로 표시해 미리보기를 보여준다. **본 저장소 반영 시 래퍼 div는 반드시 제거**한다 (CSS 클래스 정의 자체는 프로덕션에 남아도 무해). 신규 글은 전체가 새것이므로 표시하지 않는다
 
 ## 로컬 미리보기
 

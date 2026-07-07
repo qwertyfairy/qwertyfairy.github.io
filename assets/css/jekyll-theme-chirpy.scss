@@ -101,3 +101,12 @@ blockquote[class^='prompt-'] li {
 blockquote[class^='prompt-'] > ul {
   list-style: square;
 }
+
+/* preview-added: 미리보기 전용 형광펜. 샌드박스에서 추가/보완 부분을 <div class="preview-added" markdown="1">로 감싸 표시.
+   배포 전 래퍼 div를 제거하므로 프로덕션에서는 이 클래스가 쓰이지 않는다 (남아 있어도 무해). */
+.preview-added {
+  background: rgba(255, 213, 0, 0.14);
+  outline: 2px dashed rgba(255, 190, 0, 0.55);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
