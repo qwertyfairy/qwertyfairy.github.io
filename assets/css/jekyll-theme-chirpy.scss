@@ -92,6 +92,39 @@ blockquote[class^='prompt-'] li {
   > :last-child { margin-bottom: 0; }
 }
 
+/* Q&A 접기: details.box-qa — 질문(summary)만 노출, 답변은 펼쳐야 보임 */
+details.box-qa {
+  > summary {
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '▸ 답 보기';
+      display: block;
+      margin-top: 0.5rem;
+      color: #9ab87a;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    &:hover::after {
+      text-decoration: underline;
+    }
+  }
+
+  &[open] > summary::after {
+    content: '▾ 접기';
+  }
+
+  &[open] > summary {
+    margin-bottom: 0.8rem;
+  }
+}
+
 /* 사이드바 태그라인 이탤릭 제거 (부트스트랩 fst-italic이 !important라 동급으로 override) */
 #sidebar .site-subtitle {
   font-style: normal !important;
